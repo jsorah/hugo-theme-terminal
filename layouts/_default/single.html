@@ -54,4 +54,8 @@
 
   {{ partial "comments.html" . }}
 </div>
+{{ if (.Params.mermaid) }}
+<!-- MermaidJS support -->
+<script async src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+{{ end }}
 {{ end }}
