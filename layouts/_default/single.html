@@ -56,6 +56,11 @@
 </article>
 {{ if (.Params.mermaid) }}
   <!-- MermaidJS support -->
-  <script async src="https://unpkg.com/mermaid@10.1.0/dist/mermaid.min.js"></script>
+  <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({
+          securityLevel: 'loose'
+      })
+  </script>
 {{ end }}
 {{ end }}
