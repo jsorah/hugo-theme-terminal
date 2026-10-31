@@ -1,9 +1,9 @@
 <ul class="menu menu--desktop menu--language-selector">
-  <li class="menu__trigger">{{ .Language.LanguageName }}&nbsp;▾</li>
+  <li class="menu__trigger">{{ .Language.Label }}&nbsp;▾</li>
   <li>
     <ul class="menu__dropdown">
       {{ range $.Site.Home.AllTranslations }}
-        <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+        <li><a href="{{ .Permalink }}">{{ .Language.Label }}</a></li>
       {{ end }}
     </ul>
   </li>
